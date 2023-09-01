@@ -1,0 +1,24 @@
+<div class="home">
+  <h1 *ngIf="fadeState" @fadeOut class="text_fade welcomeText">
+    Welcome to my personal website
+  </h1>
+  <!-- <button> Enter </button> -->
+  <div class="first"></div>
+  <div class="second"></div>
+  <div class="third"></div>
+  <app-nav-bar *ngIf="showNavBar" @fadeIn />
+  <div *ngIf="showNavBar" @fadeIn class="introduction">
+    <span class="hello"> Hello, I'm </span> <br />
+    <span class="name"> Parham Barati</span><br />
+    <br />
+    <span class="hello"> a </span>
+    <span class="role"> Full Stack Developer </span>
+    <br />
+    <p class="about">
+      Welcome to my corner of the web! I'm thrilled that you've stopped by to
+      learn more about my journey as a full stack developer. With a passion for
+      crafting innovative digital solutions, I've embarked on an exciting
+      adventure through the realms of both front-end and back-end development.
+    </p>
+  </div>
+</div>

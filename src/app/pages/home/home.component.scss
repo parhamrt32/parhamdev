@@ -1,0 +1,374 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.home {
+  background-color: #9393934b;
+  overflow: hidden;
+
+  .welcomeText {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 41vh;
+    color: hsla(360, 45%, 95%, 0.9);
+    letter-spacing: 0.8em;
+    font-size: max(1vw , 10px);
+    line-height: 3;
+    text-align: center;
+    text-align: -webkit-center;
+    font-weight: 100;
+    opacity: 0.5;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-shadow: hsla(0, 45%, 5%, 0.3) 0 0 1px,
+      hsla(360, 55%, 95%, 0.3) 0 -1px 2px, hsla(0, 45%, 5%, 0.3) 0 -1px 2px,
+      hsla(360, 55%, 95%, 0.3) 0 20px 15px;
+  }
+
+  .first,
+  .second,
+  .third {
+    position: absolute;
+    width: 0.001vmin;
+    height: 0.001vmin;
+    border-radius: 50%;
+    opacity: 0.25;
+  }
+  app-nav-bar,
+  .name {
+    z-index: 2;
+    position: relative;
+  }
+
+  .introduction {
+    margin-left: 50px;
+    color: hsla(360, 45%, 95%, 0.9);
+
+    .hello {
+      font-family: "Lato", sans-serif;
+      font-size: min(25px, 5vw);
+    }
+    .name {
+      font-size: min(80px, 11vw);
+      color: rgba(0, 0, 0, 0.758);
+      font-family: "Orbitron", sans-serif;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+    .role {
+      font-size: min(50px, 5vw);
+      font-family: "Share Tech Mono", monospace;
+      margin-top: 5px;
+    }
+
+    .about {
+      margin-top: 10px;
+      font-size: min(15px, 4vw);
+      letter-spacing: 5px;
+      font-family: "Lato", sans-serif;
+      line-height: 1.2;
+      text-shadow: 0px 1px 9px rgba(0, 0, 0, 0.28);
+      width: 95%;
+    }
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  animation: #{$str};
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 13%;
+  }
+  50% {
+    background-position: 100% 88%;
+  }
+  100% {
+    background-position: 0% 13%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 13%;
+  }
+  50% {
+    background-position: 100% 88%;
+  }
+  100% {
+    background-position: 0% 13%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 13%;
+  }
+  50% {
+    background-position: 100% 88%;
+  }
+  100% {
+    background-position: 0% 13%;
+  }
+}
+@include keyframes(AnimationName) {
+  0% {
+    background-position: 0% 13%;
+  }
+  50% {
+    background-position: 100% 88%;
+  }
+  100% {
+    background-position: 0% 13%;
+  }
+}
+
+@include keyframes(fade_text) {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  65% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade_text {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  65% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade_text {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  65% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.text_fade {
+  -webkit-animation: fade_text 8s infinite ease-in;
+  -moz-animation: fade_text 8s infinite ease-in;
+  -o-animation: fade_text 8s infinite ease-in;
+  animation: fade_text 8s infinite ease-in;
+}
+.first {
+  -webkit-box-shadow: 0 0 45vmax 45vmax #ff00ff;
+  box-shadow: 0 0 45vmax 45vmax hsla(300, 100%, 50%, 0.867);
+  -webkit-animation: hue 10s 0s linear infinite, move 19s 0s linear infinite;
+  @include animation("hue 10s 0s linear infinite");
+}
+
+.second {
+  -webkit-box-shadow: 0 0 45vmax 45vmax #ffffff;
+  box-shadow: 0 0 45vmax 45vmax #ffffff;
+  -webkit-animation: hue 15s 0s linear infinite, move2 25s 0s linear infinite;
+  @include animation("hue 15s 0s linear infinite");
+  @include animation("move2 25s 0s linear infinite");
+}
+
+.third {
+  -webkit-box-shadow: 0 0 45vmax 45vmax #00ffff;
+  box-shadow: 0 0 45vmax 45vmax #00ffff78;
+  -webkit-animation: hue 20s 0s linear infinite, move3 15s 0s linear infinite;
+  opacity: 0.2;
+  @include animation("hue 20s 0s linear infinite");
+  @include animation("move3 15s 0s linear infinite");
+}
+@-webkit-keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    top: 0vh;
+    left: 50vw;
+  }
+  25% {
+    left: 0vw;
+  }
+  50% {
+    top: 100vh;
+  }
+  75% {
+    left: 100vw;
+  }
+  100% {
+    top: 0vh;
+    left: 50vw;
+  }
+}
+@keyframes move {
+  from {
+    top: 0vh;
+    left: 50vw;
+  }
+  25% {
+    left: 0vw;
+  }
+  50% {
+    top: 100vh;
+  }
+  75% {
+    left: 100vw;
+  }
+  to {
+    top: 0vh;
+    left: 50vw;
+  }
+}
+@-webkit-keyframes move2 {
+  0% {
+    top: 50vh;
+    left: 100vw;
+  }
+  25% {
+    top: 100vh;
+  }
+  50% {
+    left: 0vw;
+  }
+  75% {
+    top: 0vh;
+  }
+  100% {
+    top: 50vh;
+    left: 100vw;
+  }
+}
+@keyframes move2 {
+  from {
+    top: 50vh;
+    left: 100vw;
+  }
+  25% {
+    top: 100vh;
+  }
+  50% {
+    left: 0vw;
+  }
+  75% {
+    top: 0vh;
+  }
+  to {
+    top: 50vh;
+    left: 100vw;
+  }
+}
+@-webkit-keyframes move3 {
+  0% {
+    top: 100vh;
+    left: 50vw;
+  }
+  25% {
+    left: 100vw;
+  }
+  50% {
+    top: 0vh;
+  }
+  75% {
+    left: 0vw;
+  }
+  100% {
+    top: 100vh;
+    left: 50vw;
+  }
+}
+@keyframes move3 {
+  from {
+    top: 100vh;
+    left: 50vw;
+  }
+  25% {
+    left: 100vw;
+  }
+  50% {
+    top: 0vh;
+  }
+  75% {
+    left: 0vw;
+  }
+  to {
+    top: 100vh;
+    left: 50vw;
+  }
+}
