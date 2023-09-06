@@ -1,5 +1,6 @@
 import { Component, ElementRef, Renderer2, OnInit } from '@angular/core';
 import { fadeIn, fadeOut } from '../../animation/fade';
+import { WelcomeStateService } from 'src/app/service/welcome-state.service';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +9,21 @@ import { fadeIn, fadeOut } from '../../animation/fade';
   animations: [fadeOut, fadeIn],
 })
 export class HomeComponent implements OnInit {
-  fadeState = true;
-  showNavBar = false;
+  welcomeText = true;
+  showElements = false;
+  number = 0 ;
   title = 'parhambarati';
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
+  constructor( private welcomeState : WelcomeStateService ,private elementRef: ElementRef, private renderer: Renderer2) {}
   ngOnInit() {
+
+   if( this.welcomeState.getVisited() ){
+    this.showElements = true;
+    this.welcomeText = false;
+   }else{
+    this.welcomeState.setVisited(true)
+   }
+
+
     this.calculateAndSetHeight();
     this.Disappear();
   }
@@ -26,8 +37,8 @@ export class HomeComponent implements OnInit {
 
   Disappear() {
     setTimeout(() => {
-      this.fadeState = false;
-      this.showNavBar = true;
+      this.welcomeText = false;
+      this.showElements = true;
     }, 3000); // Disappear after 3 seconds
   }
 

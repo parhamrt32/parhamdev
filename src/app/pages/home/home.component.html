@@ -1,12 +1,12 @@
 <div class="home">
-  <h1 *ngIf="fadeState" @fadeOut class="text_fade welcomeText">
+  <h1 *ngIf="welcomeText" @fadeOut class="text_fade welcomeText">
     Welcome to my personal website
   </h1>
   <!-- <button> Enter </button> -->
 
-  <h1 @fadeIn class="titleName" *ngIf="showNavBar"> Parham Barati </h1>
-  <app-nav-bar *ngIf="showNavBar" @fadeIn />
-  <div *ngIf="showNavBar" @fadeIn class="introduction">
+  <h1 @fadeIn class="titleName" *ngIf="showElements"> Parham Barati </h1>
+  <app-nav-bar *ngIf="showElements" @fadeIn />
+  <div *ngIf="showElements" @fadeIn class="introduction">
     <span class="hello"> Hello, I'm </span> <br />
     <span class="name"> Parham Barati</span><br />
     <br />

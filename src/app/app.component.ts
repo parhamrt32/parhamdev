@@ -8,8 +8,8 @@ import { fadeIn, fadeOut } from './animation/fade';
 
 })
 export class AppComponent implements OnInit {
-  fadeState = true;
-  showNavBar = false;
+  welcomeText = true;
+  showElements = false;
   title = 'parhambarati';
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
   ngOnInit() {
