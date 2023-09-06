@@ -2,7 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import 'app/colors.scss';
 html{
   background-color: #000;
 }
@@ -49,4 +50,15 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+
+.titleName{
+  font-family: 'Yellowtail', cursive;
+  color:$text-color-dark-dark;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  font-size: max(1vw , 30px);
+
 }
