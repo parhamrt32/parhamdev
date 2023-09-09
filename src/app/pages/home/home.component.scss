@@ -2,22 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 @import '../../colors.scss';
 .home {
-  background-color:$background-color-dark;
   overflow: hidden;
 
-  .titleName{
-    font-family: 'Yellowtail', cursive;
-    color:$text-color-dark-dark;
-    position: relative;
-    top: 50px;
-    left: 50px;
-    font-size: max(1vw , 30px);
-    width: fit-content;
 
-  }
 
   .welcomeText {
     position: absolute;
@@ -68,7 +57,7 @@
 
     .about {
       margin-top: 10px;
-      font-size: min(15px, 4vw);
+      font-size: min(25px, 4vw);
       letter-spacing: 5px;
       font-family: "Lato", sans-serif;
       line-height: 1.2;

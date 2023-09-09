@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
    if( this.welcomeState.getVisited() ){
+    console.log('visited');
+
     this.showElements = true;
     this.welcomeText = false;
    }else{

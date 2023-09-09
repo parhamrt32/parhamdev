@@ -4,7 +4,8 @@ import { fadeIn, fadeOut } from '../../animation/fade';
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
-  styleUrls: ['./contact-me.component.scss']
+  styleUrls: ['./contact-me.component.scss'],
+  animations: [fadeOut, fadeIn],
 })
 export class ContactMeComponent implements OnInit {
 
