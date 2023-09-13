@@ -9,6 +9,12 @@ import { fadeIn, fadeOut } from '../../animation/fade';
 })
 export class ContactMeComponent implements OnInit {
 
+  formData = {
+    name: '',
+    email: '',
+    message: ''
+  };
+
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
   ngOnInit(): void {
     this.calculateAndSetHeight();
@@ -20,6 +26,11 @@ export class ContactMeComponent implements OnInit {
       const windowHeight = window.innerHeight;
       this.renderer.setStyle(welcomeElement, 'height', `${windowHeight}px`);
     }
+  }
+
+  onSubmit() {
+    console.log(this.formData);
+    // Here you can add logic to send the form data (e.g., through a service)
   }
 
 }

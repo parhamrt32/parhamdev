@@ -4,14 +4,27 @@
 
 
 <h1 class="titleName" > <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"> Parham Barati </a>  </h1>
-<nav>
+<nav style="flex-direction: row;">
   <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"> Home </a>
   <a  routerLink="/contactMe" routerLinkActive="active" ariaCurrentWhenActive="page"> Contact me </a>
   <a> Project </a>
   <a> About me </a>
+  <a> Resume </a>
 </nav>
 
-<span class="navBtn material-symbols-outlined">
+<div [ngClass]=" showDrawerState ? 'openDrawer' : 'closeDrawer' "></div>
+<nav  #drawer [ngClass]=" showDrawerState ? 'open' : 'close' " class="drawer">
+  <span (click)="closeDrawer()" class="closeBtn material-symbols-outlined">
+    close
+    </span>
+  <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"> Home </a>
+  <a  routerLink="/contactMe" routerLinkActive="active" ariaCurrentWhenActive="page"> Contact me </a>
+  <a> Project </a>
+  <a> About me </a>
+  <a> Resume </a>
+</nav>
+
+<span #menu (click)="showDrawer()" class="navBtn material-symbols-outlined">
   menu
   </span>
 </div>

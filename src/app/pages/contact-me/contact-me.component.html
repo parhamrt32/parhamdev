@@ -1,2 +1,32 @@
-<app-nav-bar   />
-
+<div class="contactMe">
+  <app-nav-bar />
+  <div class="contactMeForm">
+    <img src="https://placehold.co/200x200" />
+    <div class="formTexts">
+      <p>
+        Thank you for your interest in reaching out to me. please feel free to
+        send me an email at
+        <a class="email" href="mailto:parhambarati32@gmail.com">
+          parhambarati32@gmail.com </a
+        >. I do my best to respond within 24-48 hours. OR you can use the
+        contact form below to send me a message directly from this page
+      </p>
+      <form (ngSubmit)="onSubmit()">
+        <div class="formRow">
+          <label for="name">Name:</label>
+          <input type="text" id="name" [(ngModel)]="formData.name" name="name" required>
+        </div>
+        <div  class="formRow">
+          <label for="email">Email:</label>
+          <input type="email" id="email" [(ngModel)]="formData.email" name="email" required>
+        </div>
+        <div  class="formRow">
+          <label for="message">Message:</label>
+          <textarea id="message" [(ngModel)]="formData.message" name="message" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  <app-footer />
+</div>

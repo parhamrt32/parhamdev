@@ -8,6 +8,14 @@ html{
   background-color:$background-color-dark;
 }
 
+@media (prefers-color-scheme: dark) {
+  /* Add styles for dark mode here */
+  body {
+    background-color:$background-color-dark; /* Set background color for light mode */
+    color:aliceblue; /* Set text color for light mode */
+  }
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
