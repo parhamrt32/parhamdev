@@ -1,6 +1,13 @@
-import { Component, ElementRef, Renderer2, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Renderer2,
+  OnInit,
+  HostListener,
+} from '@angular/core';
 import { fadeIn, fadeOut } from '../../animation/fade';
 import { WelcomeStateService } from 'src/app/service/welcome-state.service';
+import { interval, takeWhile } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,25 +16,39 @@ import { WelcomeStateService } from 'src/app/service/welcome-state.service';
   animations: [fadeOut, fadeIn],
 })
 export class HomeComponent implements OnInit {
+
+  stars: NodeListOf<HTMLElement> | undefined;
+
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize(event: Event) {
+    this.calculateAndSetHeight();
+  }
+
   welcomeText = true;
   showElements = false;
-  number = 0 ;
+  number = 0;
   title = 'parhambarati';
-  constructor( private welcomeState : WelcomeStateService ,private elementRef: ElementRef, private renderer: Renderer2) {}
+
+  constructor(
+    private welcomeState: WelcomeStateService,
+    private elementRef: ElementRef,
+    private renderer: Renderer2
+  ) {}
   ngOnInit() {
+    if (this.welcomeState.getVisited()) {
+      console.log('visited');
 
-   if( this.welcomeState.getVisited() ){
-    console.log('visited');
-
-    this.showElements = true;
-    this.welcomeText = false;
-   }else{
-    this.welcomeState.setVisited(true)
-   }
-
+      this.showElements = true;
+      this.welcomeText = false;
+    } else {
+      this.welcomeState.setVisited(true);
+    }
 
     this.calculateAndSetHeight();
     this.Disappear();
+
+
   }
   calculateAndSetHeight() {
     const welcomeElement = this.elementRef.nativeElement.querySelector('.home');
@@ -43,5 +64,7 @@ export class HomeComponent implements OnInit {
       this.showElements = true;
     }, 3000); // Disappear after 3 seconds
   }
+
+
 
 }

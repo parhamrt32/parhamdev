@@ -11,6 +11,9 @@
 .contactMeForm {
   flex-grow: 2;
   display: grid;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 
   img {
     width: 100%;
@@ -45,6 +48,8 @@ a:visited {
   flex-direction: column;
 
   input {
+    width: 70%;
+    margin: 0 auto;
     padding: 5px;
     font-size: 15px;
     border-width: 2px;
@@ -57,6 +62,8 @@ a:visited {
     text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
   }
   textarea {
+    width: 70%;
+    margin: 0 auto;
     padding: 5px;
     font-size: 15px;
     border-width: 2px;
@@ -68,8 +75,6 @@ a:visited {
     box-shadow: 0px 0px 1px rgba(66, 66, 66, 0.92);
     text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
   }
-
-
 }
 
 form {
@@ -79,7 +84,7 @@ form {
   gap: 10px;
 }
 
-button{
+button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,11 +102,30 @@ button{
   background-color: #ffffff;
   margin-left: auto;
   margin-right: auto;
-
 }
 
-button:hover{
+button:hover {
   box-shadow: 0 0 #333;
   color: #fff;
   background-color: #333;
+}
+@media only screen and (min-width: 768px) {
+  .contactMeForm {
+    display: flex;
+    img {
+      width: 70%;
+      height: auto;
+    }
+  }
+
+  .formTexts {
+    width: 100%;
+    background-color: aliceblue !important;
+    color: $background-color-dark;
+  }
+
+  a:link,
+a:visited{
+  color: $background-color-dark;
+}
 }

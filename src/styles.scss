@@ -8,6 +8,29 @@ html{
   background-color:$background-color-dark;
 }
 
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #f0f8ff #1b1b1e;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #1b1b1e;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #f0f8ff;
+    border-radius: 1px;
+    border: -1px solid #ffffff;
+  }
+
 @media (prefers-color-scheme: dark) {
   /* Add styles for dark mode here */
   body {

@@ -8,6 +8,7 @@ import { ContactMeComponent } from './pages/contact-me/contact-me.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { AboutMeComponent } from './pages/about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     NavBarComponent,
     ContactMeComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

@@ -8,8 +8,8 @@
   <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"> Home </a>
   <a  routerLink="/contactMe" routerLinkActive="active" ariaCurrentWhenActive="page"> Contact me </a>
   <a> Project </a>
-  <a> About me </a>
-  <a> Resume </a>
+  <a routerLink="/aboutMe" routerLinkActive="active" ariaCurrentWhenActive="page" > About me </a>
+  <a href="../../assets/Resume/Parham_Barati_Resume.pdf" target="_blank"> Resume </a>
 </nav>
 
 <div [ngClass]=" showDrawerState ? 'openDrawer' : 'closeDrawer' "></div>
@@ -20,8 +20,8 @@
   <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"> Home </a>
   <a  routerLink="/contactMe" routerLinkActive="active" ariaCurrentWhenActive="page"> Contact me </a>
   <a> Project </a>
-  <a> About me </a>
-  <a> Resume </a>
+  <a routerLink="/aboutMe" routerLinkActive="active" ariaCurrentWhenActive="page"> About me </a>
+  <a href="../../assets/Resume/Parham_Barati_Resume.pdf" target="_blank"> Resume </a>
 </nav>
 
 <span #menu (click)="showDrawer()" class="navBtn material-symbols-outlined">
