@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Yellowtail&display=swap");
 .slides {
   scroll-snap-type: y mandatory;
   overflow: auto;
@@ -7,11 +10,12 @@
   display: flex;
   flex-direction: column;
   color: aliceblue;
+  font-family: "Lato", sans-serif;
 }
 
 .slide {
   height: 100%;
-  background-color: rgb(68, 68, 154);
+
   scroll-snap-align: start;
 }
 
@@ -23,6 +27,108 @@
   background-color: rgb(27, 171, 224);
 }
 
-.slide:nth-child(1) {
-  background-color: rgb(154, 68, 104);
+.manBun {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.first {
+  position: relative;
+  .firstText {
+    background-color: #1b1b1eb5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    line-height: 1.2;
+    text-shadow: 0px 1px 9px rgba(0, 0, 0, 0.28);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      font-size: 5vw;
+      text-align: center;
+    }
+    h2 {
+      font-size: 8vw;
+      text-align: center;
+      font-family: "Orbitron", sans-serif;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      position: relative;
+      top: 100px;
+      text-align: center;
+      animation: lights 5s 750ms linear infinite;
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
+
+  .role {
+    text-decoration: underline;
+    font-family: "Shadows Into Light", cursive;
+
+  }
+}
+
+
+
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+
+  30% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  40% {
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+
+}
+
+
+
+

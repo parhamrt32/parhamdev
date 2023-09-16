@@ -8,6 +8,13 @@ html{
   background-color:$background-color-dark;
 }
 
+:root{
+  color-scheme: light;
+}
+
+*,*::after,*::before{
+  box-sizing: border-box;
+}
 
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
