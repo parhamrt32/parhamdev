@@ -1,8 +1,9 @@
-<div class="contactMe">
+<div class="contactMe page">
   <app-nav-bar />
-  <div class="contactMeForm">
-    <img src="https://placehold.co/200x200" />
-    <div class="formTexts">
+  <h1 class="text-align-center p-1"> Keep in Touch </h1>
+  <div class="contactMeForm flex-grow-2  ml-auto mr-auto ">
+    <img class=" object-fit-cover" src="https://placehold.co/200x200" />
+    <div class="formTexts pt-2 pb-2 pl-1 pr-1 text-align-center display-f flex-dir-column justify-space-evenly">
       <p>
         Thank you for your interest in reaching out to me. please feel free to
         send me an email at
@@ -11,8 +12,8 @@
         >. I do my best to respond within 24-48 hours. OR you can use the
         contact form below to send me a message directly from this page
       </p>
-      <form (ngSubmit)="onSubmit()">
-        <div class="formRow">
+      <form class="mt-2" (ngSubmit)="onSubmit()">
+        <div class="formRow display-f flex-dir-column justify-space-between">
           <label for="name">Name:</label>
           <input type="text" id="name" [(ngModel)]="formData.name" name="name" required>
         </div>

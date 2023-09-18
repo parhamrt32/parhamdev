@@ -4,6 +4,11 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 @import 'app/colors.scss';
+@import "assets/styles/variables.scss";
+@import "assets/styles/utilities.scss";
+@import "assets/styles/breakpoint.scss";
+@import "assets/styles/layout.scss";
+@import "assets/styles/palette.scss";
 html{
   background-color:$background-color-dark;
 }
@@ -93,4 +98,9 @@ table {
 a{
   text-decoration: none;
   color: #000;
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
 }

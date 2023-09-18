@@ -35,9 +35,9 @@ img {
   height: 22px;
 }
 
-@media (prefers-color-schema:dark){
+@media (prefers-color-scheme: dark){
   footer{
-    background-color: #18181831;
+    background-color:transparent;
     text-align: center;
     box-shadow: 0px 0px 20px 1px #00000040;
     font-family: "Raleway", sans-serif;
@@ -57,12 +57,7 @@ img {
   }
 }
 
-@media(prefers-color-schema:dark){
-  footer{
-    background-color: aliceblue;
-    color: black;
-  }
-}
+
 
 @media screen and (min-width: 760px) {
   img {

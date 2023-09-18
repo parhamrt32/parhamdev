@@ -1,19 +1,19 @@
-<div class="home">
-  <h1 *ngIf="welcomeText" @fadeOut class="text_fade welcomeText">
+<div class="home page">
+  <h1 *ngIf="welcomeText" @fadeOut class="text_fade welcomeText position-absolute width-full text-align-center font-sm o-50">
     Welcome to my personal website
   </h1>
   <!-- <button> Enter </button> -->
 
 
-  <app-nav-bar *ngIf="showElements"  />
-  <div *ngIf="showElements" @fadeIn class="introduction">
+  <app-nav-bar *ngIf="showElements" class="z-index-2 position-relative"  />
+  <div *ngIf="showElements" @fadeIn class="introduction ml-3 mt-auto">
     <span class="hello"> Hello, I'm </span> <br />
-    <span class="name"> Parham Barati</span><br />
+    <span class="name z-index-1"> Parham Barati</span><br />
     <br />
     <span class="hello"> a </span>
     <span class="role"> Full Stack Developer </span>
     <br />
-    <p class="about">
+    <p class="about mt-1">
       Welcome to my corner of the web! I'm thrilled that you've stopped by to
       learn more about my journey as a full stack developer. With a passion for
       crafting innovative digital solutions, I've embarked on an exciting
@@ -21,6 +21,6 @@
     </p>
   </div>
 
-  <app-footer  *ngIf="showElements" class="footer"/>
+  <app-footer  *ngIf="showElements" class="footer mt-auto"/>
 </div>
 

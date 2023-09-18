@@ -3,31 +3,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import "../../colors.scss";
-.star {
-  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.4);
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  border-radius: 2px;
-  background-color: white;
-}
-.home {
-  display: flex;
-  flex-direction: column;
 
+.home {
   .welcomeText {
-    position: absolute;
-    width: 100%;
-    text-align: center;
     top: 41vh;
     color: $text-color-dark-dark;
     letter-spacing: 0.8em;
-    font-size: max(1vw, 10px);
     line-height: 3;
-    text-align: center;
     text-align: -webkit-center;
     font-weight: 100;
-    opacity: 0.5;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     text-shadow: hsla(0, 45%, 5%, 0.3) 0 0 1px,
@@ -35,23 +19,14 @@
       hsla(360, 55%, 95%, 0.3) 0 20px 15px;
   }
 
-  app-nav-bar,
-  .name {
-    z-index: 2;
-    position: relative;
-  }
-
   .introduction {
-    margin-left: 50px;
     color: $text-color-dark-dark;
-    margin-top: auto;
 
     .hello {
       font-family: "Lato", sans-serif;
       font-size: min(25px, 4vw);
     }
     .name {
-      z-index: 1;
       font-size: min(50px, 5vw);
       font-family: "Orbitron", sans-serif;
       text-transform: uppercase;
@@ -64,17 +39,12 @@
     }
 
     .about {
-      margin-top: 10px;
       font-size: min(20px, 4vw);
       font-family: "Lato", sans-serif;
       line-height: 1.2;
       text-shadow: 0px 1px 9px rgba(0, 0, 0, 0.28);
       width: 95%;
     }
-  }
-
-  .footer {
-    margin-top: auto;
   }
 }
 

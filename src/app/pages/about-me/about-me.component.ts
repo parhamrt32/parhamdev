@@ -1,4 +1,4 @@
-import {  Component, ElementRef, Renderer2, OnInit , HostListener  } from '@angular/core';
+import {  Component, ElementRef, Renderer2, OnInit , HostListener, AfterViewInit  } from '@angular/core';
 import { fadeIn, fadeOut } from '../../animation/fade';
 @Component({
   selector: 'app-about-me',
@@ -6,13 +6,19 @@ import { fadeIn, fadeOut } from '../../animation/fade';
   styleUrls: ['./about-me.component.scss'],
   animations: [fadeOut, fadeIn],
 })
-export class AboutMeComponent implements OnInit  {
+export class AboutMeComponent implements OnInit , AfterViewInit  {
+
+
+
   @HostListener('window:resize' , ['$event'])
   onWindowResize(event : Event){
     this.calculateAndSetHeight();
   }
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
+  ngAfterViewInit(): void {
+
+  }
   ngOnInit(): void {
     this.calculateAndSetHeight();
   }
@@ -24,4 +30,10 @@ export class AboutMeComponent implements OnInit  {
       this.renderer.setStyle(welcomeElement, 'height', `${windowHeight}px`);
     }
   }
+
+   observer = new IntersectionObserver(( entries ) => {
+    entries.forEach( (entry) => {
+
+    } )
+  })
 }
