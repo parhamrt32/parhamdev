@@ -5,21 +5,24 @@
 <div class="aboutMe page">
   <app-nav-bar />
   <div class="slides">
-    <div  class="slide  first  display-f flex-dir-column">
+    <div class="slide first display-f flex-dir-column">
       <h1>About Me</h1>
-      <div  class="textContainerWithImage position-relative">
+      <div class="textContainerWithImage position-relative">
         <img
           class="manBun"
           src="../../../assets/aboutMe/DALL·E 2023-09-14 14.03.30 - a photo from a developer which is silhouette and developer has man bun.png"
         />
         <div #item class="hidden text display-f flex-dir-column p-2">
-          <p>As you can see from domain,navbar, home page ,and etc my name is</p>
+          <p>
+            As you can see from domain,navbar, home page ,and etc my name is
+          </p>
           <h2>Parham Barati</h2>
           <p>
-            a seasoned <span class="role"> full Stack Developer</span> passionate
-            about creating seamless, innovative web solutions. With a solid
-            foundation in both front-end and back-end technologies, I specialize
-            in crafting dynamic, user-friendly applications that drive efficiency
+            a seasoned
+            <span class="role"> full Stack Developer</span> passionate about
+            creating seamless, innovative web solutions. With a solid foundation
+            in both front-end and back-end technologies, I specialize in
+            crafting dynamic, user-friendly applications that drive efficiency
             and engagement.
           </p>
           <h3 class="display-f flex-dir-column">
@@ -27,21 +30,62 @@
             <span class="material-symbols-outlined"> arrow_drop_down </span>
           </h3>
         </div>
-
-
       </div>
-
-
     </div>
-    <div  class="slide second">
+    <div class="slide second">
       <h1>My Experience</h1>
       <div #item class="textContainerWithImage position-relative hidden">
-       <app-experience-card     />
+        <app-experience-card />
       </div>
-
     </div>
     <div #item class="slide third">
-      <h1>My Education</h1>
+      <h1>My Skills</h1>
+      <div  class="textContainerWithImage ml-auto mr-auto width-fit-content position-relative display-f flex-dir-column ">
+        <div #item class="skillCard hidden m-1 p-2">
+          <h2 class="p-1" >Front-End technologies :</h2>
+          <div class="skills row gap-2 justify-space-evenly m-1">
+            <span claas="tech"> HTML5 </span>
+            <span claas="tech"> CSS3 </span>
+            <span claas="tech"> Sass </span
+            ><span claas="tech"> JavaScript (ES6) </span
+            ><span claas="tech"> TypeScript </span
+            ><span claas="tech"> React.JS </span
+            ><span claas="tech"> Angular </span
+            ><span claas="tech"> Rx.JS </span
+            ><span claas="tech"> Redux </span>
+          </div>
+        </div>
+        <div #item class="skillCard hidden m-1 p-2">
+          <h2 class="p-1" >Back-End technologies :</h2>
+          <div class="skills row gap-2 justify-space-evenly m-1">
+            <span claas="tech"> PHP </span>
+            <span claas="tech"> Node.js </span>
+            <span claas="tech"> Express.js </span
+            ><span claas="tech">  Java Enterprise </span>
+          </div>
+        </div>
+        <div #item class="skillCard hidden m-1 p-2">
+          <h2 class="p-1" >Testing :</h2>
+          <div class="skills row gap-2 justify-space-evenly m-1">
+            <span claas="tech"> Jest </span>
+            <span claas="tech"> Cypress </span>
+            <span claas="tech"> Storybook </span
+            ><span claas="tech">  JUnit </span>
+          </div>
+        </div>
+        <div #item class="skillCard hidden m-1 p-2">
+          <h2 class="p-1" >Databases :</h2>
+          <div class="skills row gap-2 justify-space-evenly m-1">
+            <span claas="tech"> SQL </span>
+            <span claas="tech"> MySQL </span>
+            <span claas="tech"> SQL Server </span
+            ><span claas="tech">  Oracle </span>
+            <span claas="tech">  MS Access </span>
+            <span claas="tech"> PostgreSQL </span
+            ><span claas="tech">  MongoDB </span>
+          </div>
+        </div>
+      </div>
     </div>
     <div #item class="slide"></div>
   </div>
