@@ -14,11 +14,14 @@
 }
 
 .slide {
-  height: 100%;
   min-height: 100%;
   max-width: 1200px;
   margin: 0 auto;
   scroll-snap-align: start;
+}
+
+.first{
+  height: 100%;
 }
 
 h1 {

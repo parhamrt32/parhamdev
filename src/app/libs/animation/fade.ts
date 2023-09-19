@@ -12,7 +12,7 @@ export let fadeOut = trigger('fadeOut', [
     style({
       opacity: 0.5
     }),
-    animate('1s ease-out', style({
+    animate('100ms ease-out', style({
       opacity: 0
     }))
   ]),

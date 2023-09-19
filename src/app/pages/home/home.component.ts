@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.welcomeText = false;
       this.showElements = true;
-    }, 3000); // Disappear after 3 seconds
+    }, 2000); // Disappear after 3 seconds
   }
 
 
