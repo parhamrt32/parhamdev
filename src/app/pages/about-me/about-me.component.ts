@@ -1,5 +1,6 @@
-import {  Component, ElementRef, Renderer2, OnInit , HostListener, AfterViewInit  } from '@angular/core';
-import { fadeIn, fadeOut } from '../../animation/fade';
+import {  Component, ElementRef, Renderer2, OnInit , HostListener, AfterViewInit, ViewChildren, QueryList  } from '@angular/core';
+import { fadeIn, fadeOut } from '../../libs/animation/fade';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
@@ -8,15 +9,35 @@ import { fadeIn, fadeOut } from '../../animation/fade';
 })
 export class AboutMeComponent implements OnInit , AfterViewInit  {
 
-
+  @ViewChildren('item') items: QueryList<ElementRef> | undefined;
 
   @HostListener('window:resize' , ['$event'])
   onWindowResize(event : Event){
     this.calculateAndSetHeight();
   }
 
+
+
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
   ngAfterViewInit(): void {
+
+    const observer = new IntersectionObserver( entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+         entry.target.classList.add('show')
+
+        }else{
+          entry.target.classList.remove('show')
+        }
+      })
+    } )
+
+    this.items?.forEach(element => {
+      observer.observe(element.nativeElement)
+    } )
+
+
+
 
   }
   ngOnInit(): void {
@@ -31,9 +52,4 @@ export class AboutMeComponent implements OnInit , AfterViewInit  {
     }
   }
 
-   observer = new IntersectionObserver(( entries ) => {
-    entries.forEach( (entry) => {
-
-    } )
-  })
 }

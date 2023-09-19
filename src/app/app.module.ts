@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavBarComponent } from './libs/nav-bar/nav-bar.component';
 import { ContactMeComponent } from './pages/contact-me/contact-me.component';
 import { HomeComponent } from './pages/home/home.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './libs/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { ExperienceCardComponent } from './libs/experience-card/experience-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
     ContactMeComponent,
     HomeComponent,
     FooterComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ExperienceCardComponent
   ],
   imports: [
     BrowserModule,

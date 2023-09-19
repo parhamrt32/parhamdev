@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import "../../colors.scss";
+
+:host {
+  width: 80%;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+
+}
+
+.card {
+
+  border-radius: 7px;
+  background: transparent;
+  box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.75);
+  line-height: 1.3;
+
+}
+
+.cardHeader{
+  border-bottom: 2px solid  #00ffc8bb;
+}
+
+.company {
+  img {
+    width: 30%;
+    max-width: 200px;
+  }
+
+  a:link,
+  a:visited {
+    color: aliceblue;
+    width: fit-content;
+    font-size: 15px;
+  }
+}
+
+.dateAndRole {
+  flex-grow: 2;
+  h2 {
+    font-size: 13px;
+    color: #c2c2c2;
+  }
+  h1 {
+    font-size: 16px;
+  }
+}
+
+.cardBody{
+  p{
+    font-family: "Lato", sans-serif;
+    line-height: 1.3;
+
+
+  }
+
+}
+
+.skill{
+  border-radius: 10px;
+  color: #00ffc8bb;
+ background-color: #2d2d2d;
+ padding: 2px 5px;
+}

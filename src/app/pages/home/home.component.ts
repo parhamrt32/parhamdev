@@ -5,8 +5,8 @@ import {
   OnInit,
   HostListener,
 } from '@angular/core';
-import { fadeIn, fadeOut } from '../../animation/fade';
-import { WelcomeStateService } from 'src/app/service/welcome-state.service';
+import { fadeIn, fadeOut } from '../../libs/animation/fade';
+import { WelcomeStateService } from 'src/app/libs/service/welcome-state.service';
 import { interval, takeWhile } from 'rxjs';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component, ElementRef, Renderer2, OnInit , HostListener } from '@angular/core';
-import { fadeIn, fadeOut } from '../../animation/fade';
+import { fadeIn, fadeOut } from '../../libs/animation/fade';
 
 @Component({
   selector: 'app-contact-me',

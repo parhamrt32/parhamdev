@@ -5,38 +5,81 @@
 .slides {
   overflow: auto;
   flex-grow: 2;
+  overflow-x: hidden;
 }
 .aboutMe {
-  display: flex;
-  flex-direction: column;
   color: aliceblue;
   font-family: "Lato", sans-serif;
+
 }
 
 .slide {
   height: 100%;
+  min-height: 100%;
   max-width: 1200px;
   margin: 0 auto;
   scroll-snap-align: start;
-
 }
 
 h1 {
   margin-bottom: auto;
-  height: 10%;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
   padding: 15px;
   font-size: min(8vw, 40px);
   position: sticky;
   top: 0;
+  z-index: 2;
+  background-color: #1b1b1eb5;
 }
 
-.text{
+.textContainerWithImage {
   height: 100%;
 }
 
+.show {
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  transform: translateX(0) !important ;
+}
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1s;
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.28);
+  justify-content: center;
+  background-color: #1b1b1eb5;
+  text-align: center;
+  line-height: 1.2;
+  p {
+    font-size: 20px;
+    span {
+      font-size: 25px;
+      font-family: "Shadows Into Light", "cursive";
+      text-transform: uppercase;
+    }
+  }
+
+  h2 {
+    font-size: 23px;
+    font-family: "Orbitron", sans-serif;
+  }
+
+  h3 {
+    position: relative;
+    top: 50px;
+    animation: lights 5s 0.75s linear infinite;
+  }
+}
 
 .manBun {
   width: 100%;
@@ -44,10 +87,72 @@ h1 {
   object-fit: cover;
 }
 
-
-
-
-
 @media only screen and (min-width: 768px) {
+  .text {
+    position: relative;
+    p {
+      font-size: 20px;
+      span {
+        font-size: 25px;
+        text-transform: uppercase;
+      }
+    }
+    h2 {
+      font-size: 25px;
+    }
+  }
+  .textContainerWithImage {
+    display: flex;
+  }
+  .manBun {
+    width: 50%;
+  }
+}
 
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+
+  30% {
+    color: hsl(230, 80%, 90%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  40% {
+    color: hsl(230, 100%, 95%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
 }
