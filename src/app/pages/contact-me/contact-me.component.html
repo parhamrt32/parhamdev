@@ -12,7 +12,7 @@
         >. I do my best to respond within 24-48 hours. OR you can use the
         contact form below to send me a message directly from this page
       </p>
-      <form class="mt-2" (ngSubmit)="onSubmit()">
+      <form  class="mt-2" (ngSubmit)="onSubmit($event)">
         <div class="formRow display-f flex-dir-column justify-space-between">
           <label for="name">Name:</label>
           <input type="text" id="name" [(ngModel)]="formData.name" name="name" required>

@@ -1,5 +1,6 @@
 import { Component, ElementRef, Renderer2, OnInit , HostListener } from '@angular/core';
 import { fadeIn, fadeOut } from '../../libs/animation/fade';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact-me',
@@ -34,9 +35,17 @@ export class ContactMeComponent implements OnInit {
     }
   }
 
-  onSubmit() {
+  onSubmit(e:Event) {
     console.log(this.formData);
     // Here you can add logic to send the form data (e.g., through a service)
+    emailjs.sendForm('service_czjf2jp', 'template_423x0pk', e.target as HTMLFormElement, '_th979TOxxwVi5po-')
+    .then( (result : EmailJSResponseStatus) => {
+      console.log(result.text);
+
+    } , (error) => {
+      console.log(error.text);
+
+    } )
   }
 
 }
