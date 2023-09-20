@@ -25,7 +25,7 @@ h1 {
     grid-column: 1;
     grid-row: 1;
 
-    background-color: #1b1b1eb5;
+    background-color:rgb(27 27 30 / 76%);
     font-family: "Lato", sans-serif;
     line-height: 1.2;
   }
@@ -107,7 +107,7 @@ button:hover {
   .contactMeForm {
     display: flex;
     img {
-      width: 70%;
+      width: 50%;
       height: auto;
     }
   }
