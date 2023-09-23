@@ -10,6 +10,8 @@ import { FooterComponent } from './libs/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ExperienceCardComponent } from './libs/experience-card/experience-card.component';
+import { NgOptimizedImage } from '@angular/common';
+import {provideImgixLoader} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,10 @@ import { ExperienceCardComponent } from './libs/experience-card/experience-card.
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    NgOptimizedImage
   ],
-  providers: [],
+  providers: [ provideImgixLoader("https://parhamdev.imgix.net/") ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
