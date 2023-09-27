@@ -12,6 +12,7 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ExperienceCardComponent } from './libs/experience-card/experience-card.component';
 import { NgOptimizedImage } from '@angular/common';
 import {provideImgixLoader} from '@angular/common';
+import { ProjectsComponent } from './pages/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {provideImgixLoader} from '@angular/common';
     HomeComponent,
     FooterComponent,
     AboutMeComponent,
-    ExperienceCardComponent
+    ExperienceCardComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
