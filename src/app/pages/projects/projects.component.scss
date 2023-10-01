@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+
 .projectCard {
   width: 80%;
   border-radius: 7px;
@@ -17,9 +19,16 @@
   .projectDescription {
     border-bottom: 2px solid rgba(73, 73, 73, 0.733);
     font-family: "Lato", sans-serif;
+    font-size: 15px;
+
+    a{
+      color: aliceblue;
+      text-decoration: underline;
+    }
   }
   .projectSkills {
     color: #00ffc8bb;
+    font-size: 14px;
     span {
       border-radius: 10px;
       background-color: #2d2d2d;
